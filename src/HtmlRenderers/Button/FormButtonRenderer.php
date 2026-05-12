@@ -20,6 +20,7 @@ class FormButtonRenderer
 
     private bool $disabled = false;
 
+    /** @var array<string, string> */
     private array $extraAttributes = [];
 
     public function label(string $label): self
@@ -107,11 +108,11 @@ class FormButtonRenderer
             $attrs[$name] = $value;
         }
 
-        $attrStr = implode(' ', array_map(
-            fn(string $name, string $value): string => sprintf('%s="%s"', $name, htmlspecialchars($value, ENT_QUOTES)),
-            array_keys($attrs),
-            $attrs,
-        ));
+        $parts = [];
+        foreach ($attrs as $name => $value) {
+            $parts[] = sprintf('%s="%s"', $name, htmlspecialchars($value, ENT_QUOTES));
+        }
+        $attrStr = implode(' ', $parts);
 
         return sprintf('<button %s>%s</button>', $attrStr, htmlspecialchars($this->label));
     }

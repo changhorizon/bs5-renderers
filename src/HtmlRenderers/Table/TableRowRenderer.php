@@ -16,6 +16,7 @@ class TableRowRenderer
 
     private string $id = '';
 
+    /** @param array<string, string> $data */
     public function data(array $data): self
     {
         $this->data = $data;

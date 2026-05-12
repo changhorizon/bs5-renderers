@@ -16,6 +16,7 @@ class LinkButtonRenderer
 
     private bool $disabled = false;
 
+    /** @var array<string, string> */
     private array $extraAttributes = [];
 
     public function href(string $href): self
@@ -87,11 +88,11 @@ class LinkButtonRenderer
             $attrs[$name] = $value;
         }
 
-        $attrStr = implode(' ', array_map(
-            fn(string $name, string $value): string => sprintf('%s="%s"', $name, htmlspecialchars($value, ENT_QUOTES)),
-            array_keys($attrs),
-            $attrs,
-        ));
+        $parts = [];
+        foreach ($attrs as $name => $value) {
+            $parts[] = sprintf('%s="%s"', $name, htmlspecialchars($value, ENT_QUOTES));
+        }
+        $attrStr = implode(' ', $parts);
 
         return sprintf('<a %s>%s</a>', $attrStr, htmlspecialchars($this->label));
     }

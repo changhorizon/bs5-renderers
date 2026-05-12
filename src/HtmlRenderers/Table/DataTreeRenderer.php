@@ -8,7 +8,6 @@ class DataTreeRenderer
 {
     private TableHeadRenderer $headRenderer;
 
-    /** @var array */
     private array $tree = [];
 
     private string $idKey = 'id';
@@ -83,7 +82,9 @@ class DataTreeRenderer
         $html = '';
 
         foreach ($nodes as $node) {
-            $hasChildren = isset($node[$this->childrenKey]) && $node[$this->childrenKey] !== [];
+            $children = (array) ($node[$this->childrenKey] ?? []);
+            $hasChildren = $children !== [];
+
             $indent = str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;', $this->depth);
             $nodeId = htmlspecialchars((string) ($node[$this->idKey] ?? ''));
             $toggle = $hasChildren
@@ -96,8 +97,8 @@ class DataTreeRenderer
             $label = htmlspecialchars((string) ($node[$this->labelKey] ?? ''));
             $html .= sprintf('<tr id="row-%s"><td>%s%s%s</td>', $nodeId, $indent, $toggle, $label);
 
-            $data = $node['data'] ?? [];
-            foreach ($data as $value) {
+            $nodeData = (array) ($node['data'] ?? []);
+            foreach ($nodeData as $value) {
                 $html .= sprintf('<td>%s</td>', htmlspecialchars((string) $value));
             }
             $html .= '</tr>';
@@ -110,7 +111,7 @@ class DataTreeRenderer
                     $show,
                 );
                 $this->depth++;
-                $html .= $this->renderNodes($node[$this->childrenKey]);
+                $html .= $this->renderNodes($children);
                 $this->depth--;
                 $html .= '</tbody>';
             }
