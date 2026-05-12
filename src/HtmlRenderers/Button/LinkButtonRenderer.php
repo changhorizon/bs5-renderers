@@ -81,7 +81,7 @@ class LinkButtonRenderer
 
         if ($this->disabled) {
             $attrs['aria-disabled'] = 'true';
-            $attrs['tabindex'] = '-1';
+            $attrs['tabindex']      = '-1';
         }
 
         foreach ($this->extraAttributes as $name => $value) {
@@ -89,6 +89,7 @@ class LinkButtonRenderer
         }
 
         $parts = [];
+
         foreach ($attrs as $name => $value) {
             $parts[] = sprintf('%s="%s"', $name, htmlspecialchars($value, ENT_QUOTES));
         }

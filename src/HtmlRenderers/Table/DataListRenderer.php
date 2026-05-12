@@ -23,8 +23,8 @@ class DataListRenderer
 
     public function __construct()
     {
-        $this->headRenderer = new TableHeadRenderer();
-        $this->rowRenderer = new TableRowRenderer();
+        $this->headRenderer    = new TableHeadRenderer();
+        $this->rowRenderer     = new TableRowRenderer();
         $this->actionsRenderer = new TableRowActionsRenderer();
     }
 
@@ -82,9 +82,11 @@ class DataListRenderer
             );
         } else {
             $html .= '<tbody>';
+
             foreach ($this->rows as $row) {
                 $this->rowRenderer->data($row);
                 $html .= $this->rowRenderer->render();
+
                 if ($this->showActions) {
                     $html .= $this->actionsRenderer->render();
                 }

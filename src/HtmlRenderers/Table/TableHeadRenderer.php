@@ -27,7 +27,7 @@ class TableHeadRenderer
 
     public function sortBy(string $column, string $direction = 'asc'): self
     {
-        $this->sortColumn = $column;
+        $this->sortColumn    = $column;
         $this->sortDirection = $direction;
 
         return $this;
@@ -50,9 +50,9 @@ class TableHeadRenderer
             $style = $col['width'] !== '' ? sprintf(' style="width:%s"', htmlspecialchars($col['width'])) : '';
 
             if ($col['sortable']) {
-                $isActive = $this->sortColumn === $col['sortKey'];
-                $dir = $isActive && $this->sortDirection === 'asc' ? 'desc' : 'asc';
-                $arrow = $isActive ? ($this->sortDirection === 'asc' ? ' &#9650;' : ' &#9660;') : '';
+                $isActive = $this->sortColumn                 === $col['sortKey'];
+                $dir      = $isActive && $this->sortDirection === 'asc' ? 'desc' : 'asc';
+                $arrow    = $isActive ? ($this->sortDirection === 'asc' ? ' &#9650;' : ' &#9660;') : '';
 
                 $html .= sprintf(
                     '<th%s><a href="?sort=%s&amp;dir=%s" class="sort-link">%s%s</a></th>',

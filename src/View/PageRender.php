@@ -19,8 +19,8 @@ class PageRender
     public function __construct()
     {
         $this->breadcrumb = new BreadcrumbRenderer();
-        $this->tree = new DataTreeRenderer();
-        $this->addButton = new LinkButtonRenderer();
+        $this->tree       = new DataTreeRenderer();
+        $this->addButton  = new LinkButtonRenderer();
     }
 
     public function breadcrumb(): BreadcrumbRenderer

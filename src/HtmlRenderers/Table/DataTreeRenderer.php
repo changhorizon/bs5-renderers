@@ -82,7 +82,7 @@ class DataTreeRenderer
         $html = '';
 
         foreach ($nodes as $node) {
-            $children = (array) ($node[$this->childrenKey] ?? []);
+            $children    = (array) ($node[$this->childrenKey] ?? []);
             $hasChildren = $children !== [];
 
             $indent = str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;', $this->depth);
@@ -98,6 +98,7 @@ class DataTreeRenderer
             $html .= sprintf('<tr id="row-%s"><td>%s%s%s</td>', $nodeId, $indent, $toggle, $label);
 
             $nodeData = (array) ($node['data'] ?? []);
+
             foreach ($nodeData as $value) {
                 $html .= sprintf('<td>%s</td>', htmlspecialchars((string) $value));
             }

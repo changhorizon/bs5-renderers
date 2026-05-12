@@ -21,10 +21,10 @@ class LocaleRender
 
     public function __construct()
     {
-        $this->breadcrumb = new BreadcrumbRenderer();
-        $this->localeTable = new DataListRenderer();
+        $this->breadcrumb    = new BreadcrumbRenderer();
+        $this->localeTable   = new DataListRenderer();
         $this->languageTable = new DataListRenderer();
-        $this->regionTable = new DataListRenderer();
+        $this->regionTable   = new DataListRenderer();
         $this->currencyTable = new DataListRenderer();
     }
 

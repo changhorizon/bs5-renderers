@@ -109,6 +109,7 @@ class FormButtonRenderer
         }
 
         $parts = [];
+
         foreach ($attrs as $name => $value) {
             $parts[] = sprintf('%s="%s"', $name, htmlspecialchars($value, ENT_QUOTES));
         }

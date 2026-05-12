@@ -56,7 +56,7 @@ class TableRowRenderer
 
         $cols = $this->columnOrder !== [] ? $this->columnOrder : array_keys($this->data);
 
-        $cells = array_map(fn(string $key): string => sprintf(
+        $cells = array_map(fn (string $key): string => sprintf(
             '<td>%s</td>',
             $this->data[$key] ?? '',
         ), $cols);
