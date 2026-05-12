@@ -33,11 +33,11 @@ return [
     '8.2'     => '', // e.g., '8.2'
     'Harper Jang'     => '', // e.g., 'Harper Jang'
     'harper.jang@outlook.com'    => '', // e.g., 'harper.jang@outlook.com'
-    'ChangHorizon\\Bs5Renderers'   => '', // e.g., 'ChangHorizon\\ExampleProject'
-    'ChangHorizon\\Bs5Renderers\\Tests' => '', // e.g., 'ChangHorizon\\ExampleProject\\Tests'
+    'ChangHorizon\\BS5Renderers'   => '', // e.g., 'ChangHorizon\\ExampleProject'
+    'ChangHorizon\\BS5Renderers\\Tests' => '', // e.g., 'ChangHorizon\\ExampleProject\\Tests'
 
     // ─── phpunit.xml.dist ───────────────────────────────────────────
-    'Bs5Renderers'       => '', // e.g., 'ExampleProject'
+    'BS5Renderers'       => '', // e.g., 'ExampleProject'
 
     // ─── phpstan.neon.dist ──────────────────────────────────────────
     'max'           => '', // e.g., 'max'

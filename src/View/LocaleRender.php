@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ChangHorizon\Bs5Renderers\View;
+namespace ChangHorizon\BS5Renderers\View;
 
-use ChangHorizon\Bs5Renderers\HtmlRenderers\Nav\BreadcrumbRenderer;
-use ChangHorizon\Bs5Renderers\HtmlRenderers\Table\DataListRenderer;
+use ChangHorizon\BS5Renderers\HtmlRenderers\Nav\BreadcrumbRenderer;
+use ChangHorizon\BS5Renderers\HtmlRenderers\Table\DataListRenderer;
 
 class LocaleRender
 {

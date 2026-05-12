@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ChangHorizon\Bs5Renderers\HtmlRenderers\Table;
+namespace ChangHorizon\BS5Renderers\HtmlRenderers\Table;
 
 class DataTreeRenderer
 {
