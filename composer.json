@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Renderers\\": "src/"
+            "ChangHorizon\\Bs5Renderers\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Renderers\Tests\\": "tests/"
+            "ChangHorizon\\Bs5Renderers\\Tests\\": "tests/"
         }
     },
     "scripts": {

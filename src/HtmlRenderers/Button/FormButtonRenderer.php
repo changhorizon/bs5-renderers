@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Renderers\HtmlRenderers\Button;
+namespace ChangHorizon\Bs5Renderers\HtmlRenderers\Button;
 
 class FormButtonRenderer
 {

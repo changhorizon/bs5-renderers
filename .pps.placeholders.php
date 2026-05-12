@@ -33,11 +33,11 @@ return [
     '8.2'     => '', // e.g., '8.2'
     'Harper Jang'     => '', // e.g., 'Harper Jang'
     'harper.jang@outlook.com'    => '', // e.g., 'harper.jang@outlook.com'
-    'Renderers'   => '', // e.g., 'ChangHorizon\\ExampleProject'
-    'Renderers\Tests' => '', // e.g., 'ChangHorizon\\ExampleProject\\Tests'
+    'ChangHorizon\\Bs5Renderers'   => '', // e.g., 'ChangHorizon\\ExampleProject'
+    'ChangHorizon\\Bs5Renderers\\Tests' => '', // e.g., 'ChangHorizon\\ExampleProject\\Tests'
 
     // ─── phpunit.xml.dist ───────────────────────────────────────────
-    'Renderers'       => '', // e.g., 'ExampleProject'
+    'Bs5Renderers'       => '', // e.g., 'ExampleProject'
 
     // ─── phpstan.neon.dist ──────────────────────────────────────────
     'max'           => '', // e.g., 'max'
@@ -48,6 +48,6 @@ return [
     'changhorizon'        => '', // e.g., 'changhorizon'
 
     // ─── README.md ──────────────────────────────────────────────────
-    'Renderers'            => '', // e.g., 'Example Project'
+    'BS5 Renderers'            => '', // e.g., 'Example Project'
     'Bootstrap 5 HTML rendering components for admin panels'          => '', // e.g., 'A very cool project'
 ];

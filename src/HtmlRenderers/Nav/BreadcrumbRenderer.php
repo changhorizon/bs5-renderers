@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Renderers\HtmlRenderers\Nav;
+namespace ChangHorizon\Bs5Renderers\HtmlRenderers\Nav;
 
 class BreadcrumbRenderer
 {

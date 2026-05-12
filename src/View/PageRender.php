@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Renderers\View;
+namespace ChangHorizon\Bs5Renderers\View;
 
-use Renderers\HtmlRenderers\Button\LinkButtonRenderer;
-use Renderers\HtmlRenderers\Nav\BreadcrumbRenderer;
-use Renderers\HtmlRenderers\Table\DataTreeRenderer;
+use ChangHorizon\Bs5Renderers\HtmlRenderers\Button\LinkButtonRenderer;
+use ChangHorizon\Bs5Renderers\HtmlRenderers\Nav\BreadcrumbRenderer;
+use ChangHorizon\Bs5Renderers\HtmlRenderers\Table\DataTreeRenderer;
 
 class PageRender
 {

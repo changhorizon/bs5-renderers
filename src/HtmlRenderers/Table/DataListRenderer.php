@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Renderers\HtmlRenderers\Table;
+namespace ChangHorizon\Bs5Renderers\HtmlRenderers\Table;
 
 class DataListRenderer
 {

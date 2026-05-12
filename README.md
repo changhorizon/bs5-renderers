@@ -51,7 +51,7 @@ src/
 ### Link Button
 
 ```php
-use Renderers\HtmlRenderers\Button\LinkButtonRenderer;
+use ChangHorizon\Bs5Renderers\HtmlChangHorizon\Bs5Renderers\Button\LinkButtonRenderer;
 
 $btn = (new LinkButtonRenderer())
     ->href('/admin/users/create')
@@ -66,7 +66,7 @@ echo $btn->render();
 ### Form Button
 
 ```php
-use Renderers\HtmlRenderers\Button\FormButtonRenderer;
+use ChangHorizon\Bs5Renderers\HtmlChangHorizon\Bs5Renderers\Button\FormButtonRenderer;
 
 $btn = (new FormButtonRenderer())
     ->label('Delete')
@@ -81,7 +81,7 @@ echo $btn->render();
 ### Breadcrumb
 
 ```php
-use Renderers\HtmlRenderers\Nav\BreadcrumbRenderer;
+use ChangHorizon\Bs5Renderers\HtmlChangHorizon\Bs5Renderers\Nav\BreadcrumbRenderer;
 
 $bc = (new BreadcrumbRenderer())
     ->add('Home', '/')
@@ -95,7 +95,7 @@ echo $bc->render();
 ### Data List Table
 
 ```php
-use Renderers\HtmlRenderers\Table\DataListRenderer;
+use ChangHorizon\Bs5Renderers\HtmlChangHorizon\Bs5Renderers\Table\DataListRenderer;
 
 $table = new DataListRenderer();
 $table->head()
@@ -116,7 +116,7 @@ echo $table->render();
 ### Data Tree Table
 
 ```php
-use Renderers\HtmlRenderers\Table\DataTreeRenderer;
+use ChangHorizon\Bs5Renderers\HtmlChangHorizon\Bs5Renderers\Table\DataTreeRenderer;
 
 $tree = new DataTreeRenderer();
 $tree->head()->addColumn('Category')->addColumn('Slug');
@@ -133,7 +133,7 @@ echo $tree->render();
 ### Page Render
 
 ```php
-use Renderers\View\PageRender;
+use ChangHorizon\Bs5Renderers\View\PageRender;
 
 $page = new PageRender();
 $page->breadcrumb()->add('Home', '/')->add('Pages');
